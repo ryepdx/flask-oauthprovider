@@ -303,7 +303,7 @@ class OAuthProvider(Server):
                         # By this point, the request is fully authorized
                         return f(*args, **kwargs)
                     else:
-                        # Unauthorized requests should not diclose their cause
+                        # Unauthorized requests should not disclose their cause.
                         return Response(status=401)
 
                 except ValueError as err:
